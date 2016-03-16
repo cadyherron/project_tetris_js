@@ -68,6 +68,21 @@ var view = {
 
   getFullDivs: function(){
     return $('.full')
+  },
+
+
+  clearRows: function() {
+    for (var i = 3; i < HEIGHT + HIDDEN_ROWS; i++) {
+      if ($('.col-xs-1.full[data-y="'+i+'"]').length === 10) {
+        console.log("clear row!")
+        $('.col-xs-1[data-y="'+i+'"]').removeClass('full');
+      }
+    }
+  },
+
+
+  moveRowsDown: function() {
+    
   }
 
 

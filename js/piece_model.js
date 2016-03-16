@@ -32,8 +32,7 @@ var PieceModel = {
     // check if we're moving off the board
     if (cd === "left" && ccp.x < 1) {
       moveLeft = false;
-    } 
-    else if (cd === "right" && ccp.x > 9) {
+    } else if (cd === "right" && ccp.x > 9) {
       moveRight = false;
     } 
     
@@ -46,27 +45,20 @@ var PieceModel = {
         if (divx == ccp.x-1 && divy == ccp.y+1){
           moveLeft = false;
         }
-      } 
-
-      else if (cd === 'right'){
+      } else if (cd === 'right'){
         if (divx == ccp.x+1 && divy == ccp.y+1) {
           moveRight = false;
         }
       }
     }
-
-    if (cd === "") {
-      moveLeft = false;
-      moveRight = false;
-    }
     
     if (moveLeft && cd === "left"){
       ccp.x -= 1;
-    }
-    if (moveRight && cd === "right"){
+    } else if (moveRight && cd === "right"){
       ccp.x += 1;
     }
   },
+
 
   stopPiece: function() {
     var divs = controller.getFullDivs();

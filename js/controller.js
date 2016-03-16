@@ -21,7 +21,8 @@ var controller = {
       PieceModel.movePiece(that.currentPiece);
       PieceModel.stopPiece();
       view.renderPiece(that.currentPiece);
-    }, 500);
+      view.clearRows();
+    }, 200);
   },
 
   moveSideways: function(){
