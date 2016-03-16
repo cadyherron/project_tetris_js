@@ -18,12 +18,11 @@ var TView = (function() {
 
 
   var renderPiece = function() {
-    var piece = LShapedRight;
-    var orientation = piece.transformations[piece.rotations]
+    var orientation = lshaped.transformations[lshaped.rotations]
+
+    $('.l-shaped-right > .row > .col-xs-4').css("background-color", "gray")
 
     for (var i = 0; i < orientation.length; i++) {
-      console.log(orientation[i])
-      console.log("identifier: "+'.l-shaped-right > .row'+orientation[i][1]+'> [data-x="'+orientation[i][0]+'"][data-y="'+orientation[i][1]+'"]')
       $('.l-shaped-right > .row'+orientation[i][1]+'> [data-x="'+orientation[i][0]+'"][data-y="'+orientation[i][1]+'"]').css("background-color", "green")
     }
   }

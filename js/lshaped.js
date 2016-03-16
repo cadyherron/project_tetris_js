@@ -21,19 +21,19 @@ var LShapedRight = (function() {
         [0,1],
         [0,2],
         [1,2]]             
-  }
+  };
 
 
 
   var rKeyListener = function(){
     $(document).keyup(function(event){
-      if (event.which === 82 && rotations < 3) {
-        console.log("r key pressed!")
-        rotations += 1;
-      } else if (event.which === 82 && rotations === 3) {
-        rotations = 0;
+      if (event.which === 82 && lshaped.rotations < 3) {
+        lshaped.rotations += 1;
+      } else if (event.which === 82) {
+        lshaped.rotations = 0;
       }
-    })
+    TView.renderPiece();
+    })    
   }
 
 
@@ -44,3 +44,5 @@ var LShapedRight = (function() {
   }
 
 })();
+
+var lshaped = LShapedRight;

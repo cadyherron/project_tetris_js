@@ -4,6 +4,9 @@ var controller = {
   direction: '',
   score: 0,
 
+  // lShapedRight: LShapedRight(),
+
+
   init: function(){
     BoardModel.buildBoard();
     PieceModel.generatePiece();
@@ -11,9 +14,10 @@ var controller = {
     view.renderBoard();
     this.gameLoop();
 
-    var lShapedRight = LShapedRight
-    lShapedRight.rKeyListener();
 
+    // rotations stuff:
+    var lShapedRight = LShapedRight;
+    LShapedRight.rKeyListener();
     var t = TView
     t.renderEmpty();
     t.renderPiece();
