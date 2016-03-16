@@ -9,7 +9,6 @@ var controller = {
     view.init();
     view.renderBoard();
     this.gameLoop();
-  
   },
 
   getBoard: function(){
@@ -22,7 +21,7 @@ var controller = {
       PieceModel.movePiece(that.currentPiece);
       PieceModel.stopPiece();
       view.renderPiece(that.currentPiece);
-    }, 100);
+    }, 500);
   },
 
   moveSideways: function(){

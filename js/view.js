@@ -1,23 +1,26 @@
 var view = {
 
   init: function(piece){
-    // register event listeners
     this.eventListeners();
-
-
   },
 
   renderBoard: function(){
-    // $("#board").html("");
-
     var board = controller.getBoard();
 
     for (var y = 0; y < board.length; y++) {
-      $("#board").append('<div class="row row'+ y + '"></div>');
+      $("#board").append('<div class="height row row'+ y + '"></div>');
       for(var x = 0; x < 10; x++){
         $('.row'+ y).append('<div class="col-xs-1" data-x='+ x +' data-y='+ y +' ></div>');
       }
-    }   
+    } 
+    this.hideTopRows(); 
+  },
+
+  hideTopRows: function() {
+    $('.col-xs-1[data-y="0"]').hide()
+    $('.col-xs-1[data-y="1"]').hide()
+    $('.col-xs-1[data-y="2"]').hide()
+    $('.col-xs-1[data-y="3"]').hide()
   },
 
   renderPiece: function(piece) {

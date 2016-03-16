@@ -1,5 +1,10 @@
+.height {
+  height: 24px;
+}
+
+
 .col-xs-1 {
-  height: 49px;
+  height: 24px;
   background-color: gray;
   border: 2px white solid;
 }
