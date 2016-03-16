@@ -13,3 +13,19 @@
 .block, .full {
   background-color: purple;
 }
+
+.l-shaped-right > .row > .col-xs-4 {
+  height: 20px;
+  width: 20px;
+  background-color: gray;
+  border: 2px white solid;
+}
+
+
+
+.lshaped-right-full {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  border: 2px white solid;
+}

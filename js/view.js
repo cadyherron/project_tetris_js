@@ -78,7 +78,6 @@ var view = {
   clearRows: function() {
     for (var i = 3; i < HEIGHT + HIDDEN_ROWS; i++) {
       if ($('.col-xs-1.full[data-y="'+i+'"]').length === 10) {
-        console.log("clear row!")
         $('.col-xs-1[data-y="'+i+'"]').removeClass('full');
         // move all rows above you down by one
         this.moveAllRowsDown();
@@ -95,7 +94,6 @@ var view = {
     $('.full').each(function(index) {
       oldCoords.push([$(this).data("x"), $(this).data("y")])
     })
-    console.log(oldCoords);
 
     for (var i = 0; i < oldCoords.length; i++) {
       oldCoords[i][1] += 1

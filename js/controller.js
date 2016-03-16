@@ -10,6 +10,13 @@ var controller = {
     view.init();
     view.renderBoard();
     this.gameLoop();
+
+    var lShapedRight = LShapedRight
+    lShapedRight.rKeyListener();
+
+    var t = TView
+    t.renderEmpty();
+    t.renderPiece();
   },
 
   getBoard: function(){
