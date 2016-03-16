@@ -2,6 +2,7 @@ var controller = {
 
   currentPiece: null,
   direction: '',
+  score: 0,
 
   init: function(){
     BoardModel.buildBoard();
@@ -22,7 +23,8 @@ var controller = {
       PieceModel.stopPiece();
       view.renderPiece(that.currentPiece);
       view.clearRows();
-    }, 200);
+      view.showScore();
+    }, 100);
   },
 
   moveSideways: function(){

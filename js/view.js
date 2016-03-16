@@ -16,6 +16,10 @@ var view = {
     this.hideTopRows(); 
   },
 
+  showScore: function() {
+    $('.score').html("Score: "+controller.score)
+  },
+
   hideTopRows: function() {
     $('.col-xs-1[data-y="0"]').hide()
     $('.col-xs-1[data-y="1"]').hide()
@@ -76,13 +80,33 @@ var view = {
       if ($('.col-xs-1.full[data-y="'+i+'"]').length === 10) {
         console.log("clear row!")
         $('.col-xs-1[data-y="'+i+'"]').removeClass('full');
+        // move all rows above you down by one
+        this.moveAllRowsDown();
+        // increase score
+        controller.score += 40
       }
     }
   },
 
 
-  moveRowsDown: function() {
-    
+  moveAllRowsDown: function() {
+    var oldCoords = [];
+
+    $('.full').each(function(index) {
+      oldCoords.push([$(this).data("x"), $(this).data("y")])
+    })
+    console.log(oldCoords);
+
+    for (var i = 0; i < oldCoords.length; i++) {
+      oldCoords[i][1] += 1
+    }
+
+    $('.full').removeClass('full')
+
+    for (var i = 0; i < oldCoords.length; i++) {
+      $('[data-x="'+oldCoords[i][0]+'"][data-y="'+oldCoords[i][1]+'"]').addClass('full')
+    }
+
   }
 
 

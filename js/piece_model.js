@@ -8,7 +8,7 @@ var PieceModel = {
   },
 
   generatePiece: function(){
-    var x = Math.floor(Math.random()*11);
+    var x = Math.floor(Math.random()*10);
     var y = 3;
 
     controller.currentPiece = new PieceModel.Piece(x, y)
@@ -32,7 +32,7 @@ var PieceModel = {
     // check if we're moving off the board
     if (cd === "left" && ccp.x < 1) {
       moveLeft = false;
-    } else if (cd === "right" && ccp.x > 9) {
+    } else if (cd === "right" && ccp.x > 8) {
       moveRight = false;
     } 
     
