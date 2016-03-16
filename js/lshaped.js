@@ -1,7 +1,5 @@
 var LShapedRight = (function() {
 
-  var height = 2;
-  var width = 3;
   var rotations = 0;
 
   var transformations = {
@@ -32,7 +30,7 @@ var LShapedRight = (function() {
       } else if (event.which === 82) {
         lshaped.rotations = 0;
       }
-    TView.renderPiece();
+    TView.renderPieces();
     })    
   }
 

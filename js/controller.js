@@ -4,8 +4,6 @@ var controller = {
   direction: '',
   score: 0,
 
-  // lShapedRight: LShapedRight(),
-
 
   init: function(){
     BoardModel.buildBoard();
@@ -16,11 +14,19 @@ var controller = {
 
 
     // rotations stuff:
-    var lShapedRight = LShapedRight;
     LShapedRight.rKeyListener();
+    // LongShaped.lKeyListener();
+
+
+
     var t = TView
-    t.renderEmpty();
-    t.renderPiece();
+    t.renderEmpty('.l-shaped-right');
+    t.renderEmpty('.l-shaped-left');
+    t.renderEmpty('.square');
+    t.renderEmpty('.long');
+    t.renderEmpty('.s-shaped-right');
+    t.renderEmpty('.s-shaped-left');
+    t.renderPieces();
   },
 
   getBoard: function(){

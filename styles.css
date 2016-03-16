@@ -19,7 +19,12 @@
   background-color: green;
 }
 
-.l-shaped-right > .row > .col-xs-4 {
+.l-shaped-right > .row > .col-xs-4,
+.l-shaped-left > .row > .col-xs-4,
+.square > .row > .col-xs-4,
+.long > .row > .col-xs-4,
+.s-shaped-right > .row > .col-xs-4,
+.s-shaped-left > .row > .col-xs-4 {
   height: 20px;
   width: 20px;
   background-color: gray;
